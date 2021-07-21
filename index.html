@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=10">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Final Project</title>
+</head>
+
+<body onload=init()>
+    <h1>Jason's JavaScript Final Project</h1>
+    <hr>
+    <div>
+        <h2>Returns a random number between 1-100</h2>
+        <button onclick="document.getElementById('demo').innerHTML = getRndInteger(0,100)">Click Me</button>
+        <script>
+            </script>
+        <p id="demo">Blah</p>
+    </div>
+    <hr>
+    <div>
+        <h2>Returns a random number between "Start" and "End"</h2>
+        <label for="rand">Start Number</label>
+        <input type="text" name="rand1" id="rand1">
+        <label for="rand">End Number</label>
+        <input type="text" name="rand2" id="rand2">
+        <button onclick="document.getElementById('randomStart').innerHTML = getRndInteger(parseInt(document.getElementById('rand1').value),max)">Click Me</button>
+        <p id = 'randomStart'>Blah</p>
+    </div>
+    <hr>
+    <div>
+        <h2>Returns a long Lorem Ipsum String</h2>
+        <button id = 'randomStringInp'>Click Me</button>
+                <script type="text/javascript" src="code.js">
+                    
+            </script>
+        <p id = 'randomString'>Blah</p>
+    </div>
+    <hr>
+    <div>
+        <h2>Returns a Lorem Ipsum String based on the number or sentences specified</h2>
+        <label for="rand">Number of sentences</label>
+        <input type="text" name="rand">
+        <button>Click Me</button>
+        <p>Blah</p>
+    </div>
+    <hr>
+    <div>
+        <h2>Returns a Lorem Ipsum String based on the number or characters specified</h2>
+        <label for="rand">Random Number Generator</label>
+        <input type="text" name="rand">
+        <button>Click Me</button>
+        <p>Blah</p>
+    </div>
+    <hr>
+    <div>
+        <h2>Returns the current date(formatted)</h2>
+        <button onclick="document.getElementById('date').innerHTML=getDate()">Click Me</button>
+        <p id = 'date'>Blah</p>
+    </div>
+    <hr>
+    <div>
+        <h2>Returns the current time(formatted)</h2>
+        <button onclick="document.getElementById('currentTime').innerHTML= getCurrentTime()">Click Me</button>
+        <p id = 'currentTime'>Blah</p>
+    </div>
+    <hr>
+    <div>
+        <h2>Converts Inches to Feet</h2>
+        <label for="rand">Number of inches</label>
+        <input type="text" name="rand" id="inch">
+        <button onclick="document.getElementById('inchOutput').innerHTML= convertInchtoFeet(document.getElementById('inch').value)">Click Me</button>
+        <p id="inchOutput">Blah</p>
+    </div>
+    <hr>
+    <div>
+        <h2>Converts Feet to Inches</h2>
+        <label for="rand">Number of inches</label>
+        <input type="text" name="rand" id="feet">
+        <button onclick="document.getElementById('feetOutput').innerHTML= convertfeettoInch(document.getElementById('feet').value)">Click Me</button>
+        <p id = 'feetOutput'>Blah</p>
+    </div>
+    <hr>
+    <div>
+        <h2>Compares if two words are the same length</h2>
+        <label for="rand">First Word</label>
+        <input type="text" name="rand1" id = "firstWord">
+        <label for="rand">Second Word</label>
+        <input type="text" name="rand2" id = "secondWord">
+        <button onclick="document.getElementById('wordLenghtOutput').innerHTML= compareWordLength(document.getElementById('firstWord').value,document.getElementById('secondWord').value)">Click Me</button>
+        <p id='wordLenghtOutput'>Blah</p>
+    </div>
+    <hr>
+    <div>
+        <h2>Returns a random password</h2>
+        <button id = "randomPasswordClick">Click Me</button>
+        <p id = "randomPasswordClickOutput">Blah</p>
+    </div>
+    <hr>
+    <div>
+        <!-- Challenge. See if you can use the % symbol. Google "javascript modulo". -->
+        <h2>Tells you if the number is even or odd</h2>
+        <label for="rand">Number</label>
+        <input type="text" name="rand">
+        <button>Click Me</button>
+        <p>Blah</p>
+    </div>
+    <hr>
+    <div>
+        <h2>Returns a random color</h2>
+        <button>Click Me</button>
+        <p>Blah</p>
+    </div>
+    <hr>
+    <div>
+        <h2>Returns a random first and last name</h2>
+        <button id ="randomName">Click Me</button>
+        <p id ="randomNameOutput">Blah</p>
+    </div>
+    <hr>
+</body>
+
+</html>
