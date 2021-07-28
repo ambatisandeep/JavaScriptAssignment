@@ -25,7 +25,7 @@
         <input type="text" name="rand1" id="rand1">
         <label for="rand">End Number</label>
         <input type="text" name="rand2" id="rand2">
-        <button onclick="document.getElementById('randomStart').innerHTML = getRndInteger(parseInt(document.getElementById('rand1').value),max)">Click Me</button>
+        <button onclick="document.getElementById('randomStart').innerHTML = getRndInteger(parseInt(document.getElementById('rand1').value),parseInt(document.getElementById('rand2').value))">Click Me</button>
         <p id = 'randomStart'>Blah</p>
     </div>
     <hr>
@@ -41,17 +41,17 @@
     <div>
         <h2>Returns a Lorem Ipsum String based on the number or sentences specified</h2>
         <label for="rand">Number of sentences</label>
-        <input type="text" name="rand">
-        <button>Click Me</button>
-        <p>Blah</p>
+        <input type="text" name="rand" id = "numInput" >
+        <button onclick="document.getElementById('randomSentenceOutput').innerHTML=randomSentence(document.getElementById('numInput').value)">Click Me</button>
+        <p id='randomSentenceOutput'>Blah</p>
     </div>
     <hr>
     <div>
         <h2>Returns a Lorem Ipsum String based on the number or characters specified</h2>
         <label for="rand">Random Number Generator</label>
-        <input type="text" name="rand">
-        <button>Click Me</button>
-        <p>Blah</p>
+        <input type="text" name="rand" id = "charNumInput">
+        <button onclick="document.getElementById('randomCharacterOutput').innerHTML=randomCharacter(document.getElementById('charNumInput').value)">Click Me</button>
+        <p id='randomCharacterOutput'>Blah</p>
     </div>
     <hr>
     <div>
@@ -70,7 +70,7 @@
         <h2>Converts Inches to Feet</h2>
         <label for="rand">Number of inches</label>
         <input type="text" name="rand" id="inch">
-        <button onclick="document.getElementById('inchOutput').innerHTML= convertInchtoFeet(document.getElementById('inch').value)">Click Me</button>
+        <button onclick="document.getElementById('inchOutput').innerHTML= convertInchToFeet(document.getElementById('inch').value)">Click Me</button>
         <p id="inchOutput">Blah</p>
     </div>
     <hr>
@@ -78,7 +78,7 @@
         <h2>Converts Feet to Inches</h2>
         <label for="rand">Number of inches</label>
         <input type="text" name="rand" id="feet">
-        <button onclick="document.getElementById('feetOutput').innerHTML= convertfeettoInch(document.getElementById('feet').value)">Click Me</button>
+        <button onclick="document.getElementById('feetOutput').innerHTML= convertFeetToInch(document.getElementById('feet').value)">Click Me</button>
         <p id = 'feetOutput'>Blah</p>
     </div>
     <hr>
@@ -102,15 +102,15 @@
         <!-- Challenge. See if you can use the % symbol. Google "javascript modulo". -->
         <h2>Tells you if the number is even or odd</h2>
         <label for="rand">Number</label>
-        <input type="text" name="rand">
-        <button>Click Me</button>
-        <p>Blah</p>
+        <input type="text" name="rand" id="evenOroddNumInput">
+        <button onclick="document.getElementById('evenOroddNumOutput').innerHTML= evenOrOdd(document.getElementById('evenOroddNumInput').value)">Click Me</button>
+        <p id='evenOroddNumOutput'>Blah</p>
     </div>
     <hr>
     <div>
         <h2>Returns a random color</h2>
-        <button>Click Me</button>
-        <p>Blah</p>
+        <button onclick="document.getElementById('randomColoroutput').innerHTML= randomColor()">Click Me</button>
+        <p id="randomColoroutput">Blah</p>
     </div>
     <hr>
     <div>

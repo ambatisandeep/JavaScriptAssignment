@@ -37,6 +37,18 @@ const names =
     },
 ]
 
+
+
+
+// Returns a random number between 1-100
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+
+//Returns a Lorem Ipsum String based on the number or sentences specified
+
 function randomSentence(numInput){
 
  const arr = lorem.split(".")
@@ -49,6 +61,8 @@ for(i=0;i<numInput;i++){
 return temp;
 }
 
+
+//Returns a Lorem Ipsum String based on the number or characters specified
 
 function randomCharacter(numInput){
 
@@ -71,41 +85,49 @@ function randomName(){
 
 }
 
-randomName()
 
-function init(){
+//Returns a random color
 
-    
-document.getElementById('randomPasswordClick').onclick = function(){
-    document.getElementById('randomPasswordClickOutput').innerHTML = randomString(0,password.length,password);
-}
+function randomColor(){
 
-document.getElementById('randomStringInp').onclick = function(){
-    document.getElementById('randomString').innerHTML = randomString(0,lorem.length,lorem);
-    }
+    colorRandom = colors[getRndInteger(0,colors.length)]
 
-    document.getElementById('randomName').onclick = function(){
-        document.getElementById('randomNameOutput').innerHTML = randomName(0,lorem.length,lorem);
-        }
+    return colorRandom
 
 }
-
-
-
-
-function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-  }
-
-
+//Returns Random String
 function randomString(min, max,inputString) {
     min = getRndInteger(min, max)+1
     max = getRndInteger(min, max)-1
     return inputString.substring(min,max);
   }
-  
-  
 
+
+function init(){
+
+//Returns a long Lorem Ipsum String
+    
+document.getElementById('randomStringInp').onclick = function(){
+    document.getElementById('randomString').innerHTML = randomString(0,lorem.length,lorem);
+    }
+
+// Returns a random password
+    
+document.getElementById('randomPasswordClick').onclick = function(){
+    document.getElementById('randomPasswordClickOutput').innerHTML = randomString(0,password.length,password);
+}
+
+//Returns a random first and last name
+
+    document.getElementById('randomName').onclick = function(){
+        document.getElementById('randomNameOutput').innerHTML = randomName(0,lorem.length,lorem);
+        
+        }
+
+
+}
+
+//Returns the current date(formatted)
 
 function getDate(){
 
@@ -115,6 +137,8 @@ function getDate(){
 
 }
 
+//Returns the current time(formatted)
+
 function getCurrentTime() {
 
     const timeValue = new Date()
@@ -123,21 +147,20 @@ function getCurrentTime() {
 
 }
 
-function convertInchtoFeet(inch){
-
+//Converts Inches to Feet
+function convertInchToFeet(inch){
     const feet = inch * 0.083333
-
     return feet
 }
 
+//Converts Feet to Inches
 
-function convertfeettoInch(feet){
-
+function convertFeetToInch(feet){
     const inch = feet/0.083333
-
     return inch
 }
 
+//Compares if two words are the same length
 
 function compareWordLength (fristInput,secoundInput){
 
@@ -146,9 +169,20 @@ function compareWordLength (fristInput,secoundInput){
      }else{
         return "Length of the words are not equal"
      }
+}
 
+//Tells you if the number is even or odd
+
+function evenOrOdd(numInput){
+
+    if(numInput%2==0){
+       return  "Given number is EVEN"
+    }else{
+        return "Given number is ODD"
+    }
 
 }
+
 
 
 
