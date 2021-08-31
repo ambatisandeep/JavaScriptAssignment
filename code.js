@@ -181,7 +181,12 @@ function evenOrOdd(numInput){
         return "Given number is ODD"
     }
 
+    
+    
 }
+
+
+console.log("Test")
 
 
 
